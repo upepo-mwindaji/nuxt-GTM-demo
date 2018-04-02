@@ -1,33 +1,40 @@
 <template>
   <section class="container">
     <div>
-      <app-logo/>
-      <h1 class="title">
-        nuxt-gtm-demo
-      </h1>
-      <h2 class="subtitle">
-        Demo using GTM module with Nuxt
-      </h2>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+        <nuxt-link to="click"
+          class="button--green">Click Event</nuxt-link>
+        <nuxt-link to="mount"
+          class="button--grey">Mount Event</nuxt-link>
+        <nuxt-link to="hover"
+          class="button--purple">Hover Event</nuxt-link>
+      </div>
+      <div class="links">
+        <h1 class="title">
+          nuxt-gtm-demo
+        </h1>
+        <h2 class="subtitle">
+          Demo using GTM module with Nuxt
+        </h2>
+        <a to="#"
+        class="button--blue">Activate Debug</a>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
 
 export default {
-  components: {
-    AppLogo
+  data() {
+    return {
+      title: 'Homepage'
+    }
+  },
+  head() {
+    return {
+      title: `Nuxt GTM Demo | ${this.title}`
+    }
   }
 }
 </script>

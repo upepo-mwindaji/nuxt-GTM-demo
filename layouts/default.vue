@@ -21,6 +21,38 @@ html {
   margin: 0;
 }
 
+a {
+  margin:20px;
+}
+
+.button--purple {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #5d3f92;
+  color: #5d3f92;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.button--purple:hover {
+  color: #fff;
+  background-color: #5d3f92;
+}
+
+.button--blue {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid #3685c3;
+  color: #3685c3;
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.button--blue:hover {
+  color: #fff;
+  background-color: #3685c3;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
