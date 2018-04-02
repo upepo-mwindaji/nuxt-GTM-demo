@@ -1,6 +1,9 @@
 # nuxt-gtm-demo
 
-> Demo using GTM module with Nuxt
+> Demo using [Nuxt Google Tag Manager module](https://github.com/nuxt-community/modules/tree/master/packages/google-tag-manager)
+
+> This demo uses a [modified version](https://github.com/upepo-mwindaji/nuxt-gtm-demo/blob/master/modules/google-tag-manager/README2.md) of the module  
+
 
 ## Build Setup
 
