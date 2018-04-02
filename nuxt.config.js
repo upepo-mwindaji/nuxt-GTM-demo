@@ -1,4 +1,8 @@
 module.exports = {
+
+  modules: [
+   ['~/modules/google-tag-manager', { id: 'GTM-TWMCBFD', allowDev: true}],
+  ],
   /*
   ** Headers of the page
   */
