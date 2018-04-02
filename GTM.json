@@ -1,0 +1,652 @@
+{
+    "exportFormatVersion": 2,
+    "exportTime": "2018-04-02 17:58:04",
+    "containerVersion": {
+        "path": "accounts/2848397815/containers/8739776/versions/1",
+        "accountId": "2848397815",
+        "containerId": "8739776",
+        "containerVersionId": "1",
+        "name": "Nuxt GTM Version 1",
+        "container": {
+            "path": "accounts/2848397815/containers/8739776",
+            "accountId": "2848397815",
+            "containerId": "8739776",
+            "name": "Nuxt GTM Container",
+            "publicId": "GTM-TWMCBFD",
+            "usageContext": [
+                "WEB"
+            ],
+            "fingerprint": "1522691264521",
+            "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/2848397815/containers/8739776/workspaces?apiLink=container"
+        },
+        "tag": [
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "tagId": "4",
+                "name": "Nuxt Page View - SSR",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_PAGEVIEW"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{UA Property Settings}}"
+                    }
+                ],
+                "fingerprint": "1522676738229",
+                "firingTriggerId": [
+                    "2147479553"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "tagId": "2",
+                "name": "Nuxt Page View - Virtual",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_PAGEVIEW"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{UA Property Settings}}"
+                    }
+                ],
+                "fingerprint": "1522676695585",
+                "firingTriggerId": [
+                    "5"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "tagId": "3",
+                "name": "Nuxt Standard Event",
+                "type": "ua",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "nonInteraction",
+                        "value": "{{Nuxt Standard Event - Non-Interaction}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "overrideGaSettings",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventValue",
+                        "value": "{{Nuxt Standard Event - Value}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventCategory",
+                        "value": "{{Nuxt Standard Event - Category}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackType",
+                        "value": "TRACK_EVENT"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "gaSettings",
+                        "value": "{{UA Property Settings}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventAction",
+                        "value": "{{Nuxt Standard Event - Action}}"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "eventLabel",
+                        "value": "{{Nuxt Standard Event - Label}}"
+                    }
+                ],
+                "fingerprint": "1522622371842",
+                "firingTriggerId": [
+                    "7"
+                ],
+                "tagFiringOption": "ONCE_PER_EVENT"
+            }
+        ],
+        "trigger": [
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "triggerId": "5",
+                "name": "Nuxt Head Changed",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "nuxtHeadChange"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1522691521343"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "triggerId": "10",
+                "name": "Nuxt Page Mounted",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "nuxtPageMounted"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1522676782714"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "triggerId": "6",
+                "name": "Nuxt Route Changed",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "nuxtRouteChange"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1522634396852"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "triggerId": "7",
+                "name": "Nuxt Standard Event",
+                "type": "CUSTOM_EVENT",
+                "customEventFilter": [
+                    {
+                        "type": "EQUALS",
+                        "parameter": [
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg0",
+                                "value": "{{_event}}"
+                            },
+                            {
+                                "type": "TEMPLATE",
+                                "key": "arg1",
+                                "value": "Nuxt Standard Event"
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1522622371835"
+            }
+        ],
+        "variable": [
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "1",
+                "name": "Nuxt Route Path",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "nuxtRoute.path"
+                    }
+                ],
+                "fingerprint": "1522622371836"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "2",
+                "name": "Nuxt Standard Event - Action",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "nuxtStandardEvent.action"
+                    }
+                ],
+                "fingerprint": "1522622371836"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "3",
+                "name": "Nuxt Standard Event - Category",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "nuxtStandardEvent.category"
+                    }
+                ],
+                "fingerprint": "1522622371836"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "4",
+                "name": "Nuxt Standard Event - Interaction",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "nuxtStandardEvent.interaction"
+                    }
+                ],
+                "fingerprint": "1522622371837"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "5",
+                "name": "Nuxt Standard Event - Label",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "nuxtStandardEvent.label"
+                    }
+                ],
+                "fingerprint": "1522622371837"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "6",
+                "name": "Nuxt Standard Event - Non-Interaction",
+                "type": "jsm",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "javascript",
+                        "value": "function(){\n  return !{{Nuxt Standard Event - Interaction}};\n}"
+                    }
+                ],
+                "fingerprint": "1522622371838"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "7",
+                "name": "Nuxt Standard Event - Value",
+                "type": "v",
+                "parameter": [
+                    {
+                        "type": "INTEGER",
+                        "key": "dataLayerVersion",
+                        "value": "2"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "name",
+                        "value": "nuxtStandardEvent.value"
+                    }
+                ],
+                "fingerprint": "1522622371838"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "10",
+                "name": "UA Property ID - Dev",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "UA-116731483-2"
+                    }
+                ],
+                "fingerprint": "1522634238864"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "8",
+                "name": "UA Property ID - Prod",
+                "type": "c",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "value",
+                        "value": "UA-116731483-1"
+                    }
+                ],
+                "fingerprint": "1522623025184"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "11",
+                "name": "UA Property Lookup",
+                "type": "remm",
+                "parameter": [
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setDefaultValue",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "input",
+                        "value": "{{Page Hostname}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "fullMatch",
+                        "value": "true"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "replaceAfterMatch",
+                        "value": "true"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "defaultValue",
+                        "value": "{{UA Property ID - Prod}}"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "ignoreCase",
+                        "value": "true"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "map",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "localhost"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{UA Property ID - Dev}}"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "key",
+                                        "value": "www"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{UA Property ID - Prod}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "fingerprint": "1522623704513"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "variableId": "9",
+                "name": "UA Property Settings",
+                "type": "gas",
+                "parameter": [
+                    {
+                        "type": "TEMPLATE",
+                        "key": "cookieDomain",
+                        "value": "auto"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "doubleClick",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "setTrackerName",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useDebugVersion",
+                        "value": "false"
+                    },
+                    {
+                        "type": "LIST",
+                        "key": "fieldsToSet",
+                        "list": [
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "anonymizeIp"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "true"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "allowLinker"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "true"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "MAP",
+                                "map": [
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "fieldName",
+                                        "value": "page"
+                                    },
+                                    {
+                                        "type": "TEMPLATE",
+                                        "key": "value",
+                                        "value": "{{Nuxt Route Path}}"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "useHashAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "decorateFormsAutoLink",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableLinkId",
+                        "value": "false"
+                    },
+                    {
+                        "type": "BOOLEAN",
+                        "key": "enableEcommerce",
+                        "value": "false"
+                    },
+                    {
+                        "type": "TEMPLATE",
+                        "key": "trackingId",
+                        "value": "{{UA Property Lookup}}"
+                    }
+                ],
+                "fingerprint": "1522623733586"
+            }
+        ],
+        "builtInVariable": [
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "type": "PAGE_URL",
+                "name": "Page URL"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "type": "PAGE_HOSTNAME",
+                "name": "Page Hostname"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "type": "PAGE_PATH",
+                "name": "Page Path"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "type": "REFERRER",
+                "name": "Referrer"
+            },
+            {
+                "accountId": "2848397815",
+                "containerId": "8739776",
+                "type": "EVENT",
+                "name": "Event"
+            }
+        ],
+        "fingerprint": "1522691859981",
+        "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/2848397815/containers/8739776/versions/1?apiLink=version"
+    }
+}
