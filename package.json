@@ -16,6 +16,8 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "dependencies": {
+    "@nuxtjs/axios": "^5.3.1",
+    "lodash": "^4.17.5",
     "nuxt": "^1.0.0",
     "vue-echarts": "^3.0.7"
   },

@@ -12,6 +12,7 @@ module.exports = {
 
   modules: [
    ['~/modules/google-tag-manager', { id: 'GTM-TWMCBFD', allowDev: true}],
+   '@nuxtjs/axios'
   ],
   /*
   ** Headers of the page

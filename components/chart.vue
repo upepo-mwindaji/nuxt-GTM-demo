@@ -1,7 +1,5 @@
 <template>
-  <div class="chart">
-    <chart :options="bars"></chart>
-  </div>
+  <chart :options="bars"></chart>
 </template>
 
 <script>
@@ -10,38 +8,50 @@ import 'echarts/lib/chart/bar'
 import 'echarts/lib/component/tooltip'
 import Data from './echartData'
 
+const endpoints = {
+  localhost: 'https://nuxt-gtm-demo-superproxy.appspot.com/query?id=ahpwfm51eHQtZ3RtLWRlbW8tc3VwZXJwcm94eXIVCxIIQXBpUXVlcnkYgICAgLyhggoM',
+  ghpages: 'https://nuxt-gtm-demo-superproxy.appspot.com/query?id=ahpwfm51eHQtZ3RtLWRlbW8tc3VwZXJwcm94eXIVCxIIQXBpUXVlcnkYgICAgICAgAoM'
+}
+
 export default {
   components: { chart },
   data () {
     return {
-      bars: new Data(20)
+      bars: new Data(30)
     }
   },
   mounted () {
-
+    let url
+    if (window.location.href.indexOf('localhost') >=0) {
+      url = endpoints.localhost
+    } else {
+      url = endpoints.ghpages
+    }
     let runner =  () => {
-      this.bars.pushData([
-        { name: 'hover', value: Math.floor(Math.random()*100) },
-        { name: 'click', value: Math.floor(Math.random()*100) },
-        { name: 'newevent', value: Math.floor(Math.random()*100) }
-      ])
+      let data = this.$axios.$get(url)
+      .then((response) => {
+        if (response.totalResults > 0) {
+          let rtData = response.rows.map(function(row){
+            let obj = {}
+            response.columnHeaders.forEach(function(columnHeader,index){
+              obj[columnHeader.name] = row[index]
+            })
+            return obj
+          })
+          this.bars.updateData(rtData)
+        }
+      })
       setTimeout(function() {
         runner();
-      }, 2000);
+      }, 30000);
     }
     runner();
-
   }
 
 }
-
 </script>
+
 <style>
-.chart {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
 .echarts {
   width: 100% !important;
   height: 100% !important;
