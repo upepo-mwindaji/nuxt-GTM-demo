@@ -46,14 +46,17 @@ module.exports = function nuxtTagManager(_options) {
     let dataLayer = newInfo.meta.find((meta)=>{ return meta.name === 'GTM-dataLayer'}).content
     let container = newInfo.meta.find((meta)=>{ return meta.name === 'GTM-container'}).content
     // to debounce the event which can be fired multiple times per page mount
-    let isRouteOpen =  (window.google_tag_manager[container].dataLayer.get('nuxtHeadChange') === 'open')
-    if (isRouteOpen) {
-      window[dataLayer].push({
-        'event': 'nuxtHeadChange',
-        'pageTitle': newInfo.title,
-        'nuxtHeadChange': 'closed'
-      })
+    if (window.google_tag_manager) {
+      let isRouteOpen =  (window.google_tag_manager[container].dataLayer.get('nuxtHeadChange') === 'open')
+      if (isRouteOpen) {
+        window[dataLayer].push({
+          'event': 'nuxtHeadChange',
+          'pageTitle': newInfo.title,
+          'nuxtHeadChange': 'closed'
+        })
+      }
     }
+    console.warn('failed to load google tag manager')
   }
 
   // Register plugin

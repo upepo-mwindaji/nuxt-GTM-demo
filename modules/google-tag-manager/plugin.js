@@ -145,7 +145,7 @@ Vue.mixin({
   mounted () {
     this.$nextTick(() => {
       let isPage = (this.$el.parentElement.parentElement.getAttribute('id') === '__layout')
-      if (isPage) {
+      if (isPage && window.google_tag_manager) {
         let isRouteOpen =  (window.google_tag_manager['<%= options.id %>'].dataLayer.get('nuxtPageMounted') === 'open');
         if (isRouteOpen) {
           window['<%= options.layer %>'].push({
@@ -153,6 +153,8 @@ Vue.mixin({
             'nuxtPageMounted': 'closed'
           });
         }
+      } else {
+        console.warn('failed to load google tag manager')
       }
     });
   },
