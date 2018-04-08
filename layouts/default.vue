@@ -1,9 +1,18 @@
 <template>
   <div>
+    <div class="chartcontainer">
+      <rtchart></rtchart>
+    </div>
     <nuxt/>
   </div>
 </template>
 
+<script>
+import rtchart from '~/components/chart'
+export default {
+  components: { rtchart }
+}
+</script>
 <style>
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -23,6 +32,13 @@ html {
 
 a {
   margin:20px;
+}
+
+.chartcontainer {
+  width: 400px;
+  height: 200px;
+  right: 0;
+  position: absolute;
 }
 
 .button--purple {
