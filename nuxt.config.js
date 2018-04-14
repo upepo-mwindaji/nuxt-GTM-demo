@@ -1,3 +1,5 @@
+const webpack = require('webpack')
+
 // only add `router.base = '/<repository-name>/'` if `DEPLOY_ENV` is `GH_PAGES`
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
@@ -36,6 +38,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        '_': 'lodash'
+      })
+    ],
     /*
     ** Run ESLint on save
     */

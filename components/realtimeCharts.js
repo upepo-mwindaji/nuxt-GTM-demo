@@ -1,5 +1,3 @@
-import _ from 'lodash'
-
 const formatResponse = (rawData) => {
   if (rawData.totalResults > 0) {
     return rawData.rows.map(function(row){
