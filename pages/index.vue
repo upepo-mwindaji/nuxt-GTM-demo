@@ -17,6 +17,7 @@
           Demo using GTM module with Nuxt
         </h2>
         <a :href="previewUrl" target="_blank" class="button--blue" >Activate Debug</a>
+        <nuxt-link to="charts" class="button--blue">Real Time Charts</nuxt-link>
 
       </div>
     </div>
