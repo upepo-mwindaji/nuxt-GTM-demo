@@ -1,18 +1,9 @@
 <template>
   <div>
-    <div class="chartcontainer">
-      <rtchart></rtchart>
-    </div>
     <nuxt/>
   </div>
 </template>
 
-<script>
-import rtchart from '~/components/chart'
-export default {
-  components: { rtchart }
-}
-</script>
 <style>
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -34,11 +25,50 @@ a {
   margin:20px;
 }
 
-.chartcontainer {
-  width: 400px;
-  height: 200px;
-  right: 0;
-  position: absolute;
+.header {
+  /*height: 10vh;*/
+  /*position: relative;*/
+  display: flex;
+}
+
+.container {
+  height: 90vh;
+  /*position: relative;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+
+.links {
+  padding-top: 15px;
+}
+
+button {
+  font-size: 42px;
+  cursor:pointer;
+}
+
+.button--home {
+  display: inline-block;
+  border-radius: 4px;
+  border: 1px solid black;
+  color: black;
+  text-decoration: none;
+  padding: 4px 30px;
+}
+
+.button--home:hover {
+  color: white;
+  background-color: black;
 }
 
 .button--purple {

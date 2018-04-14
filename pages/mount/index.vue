@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="header">
-      <nuxt-link to="/" class="button--purple">Home</nuxt-link>
+      <nuxt-link to="/" class="button--home">Home</nuxt-link>
     </section>
     <section class="container">
       <div>
@@ -32,32 +32,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-
-button {
-  font-size: 42px;
-  cursor:pointer;
-}
-
-
-</style>
